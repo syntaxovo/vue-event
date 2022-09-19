@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
-</template>
+<div>
 
+<el-button>1231</el-button>
+</div>
+</template>
+<script>
+import { registerAPI } from '@/api/index'
+
+export default {
+  async  created () {
+    const res = await registerAPI()
+    console.log(res)
+  }
+}
+</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
